@@ -13,9 +13,10 @@ class Polygon {
 
 class Triangle extends Polygon{
     get isValid() {
-       let a = this.sides[0]
-       let b = this.sides[1]
-       let c = this.sides[2]
+    //    let a = this.sides[0]
+    //    let b = this.sides[1]
+    //    let c = this.sides[2]
+    let a,b,c = [this.sides[0], this.sides[1],this.sides[2]]
        const con1 = a + b > c;
        const con2 = b + c > a;
        const con3 = c + a > b;
@@ -26,13 +27,7 @@ class Triangle extends Polygon{
 
 class Square extends Polygon {
     get isValid() {
-    // let a = this.sides[0]
-    // let b = this.sides[1]
-    // let c = this.sides[2]
-    // let d = this.sides[3]
-    //     if (a === b && a === c && c === d) {
-    //         return true 
-    //     }
+  
     return this.sides.every( (val, i, arr) => val === arr[0] )
        
     }
